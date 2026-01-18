@@ -3,6 +3,7 @@ import "./App.css";
 
 const questions = [
   {
+    
     question: "What does HTML stand for?",
     options: [
       "Hyper Tool Markup Language",
@@ -78,6 +79,16 @@ function App() {
           <h3>
             Question {currentQuestion + 1} of {questions.length}
           </h3>
+
+          <div className="progress-bar">
+            <div
+            className="progress"
+            style={{
+              width: `${((currentQuestion + 1) / questions.length) * 100}%`,
+       }}
+       ></div>
+        
+       </div>
 
           <p className="question">
             {questions[currentQuestion].question}
